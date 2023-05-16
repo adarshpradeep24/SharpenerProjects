@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book A Call</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    <style>
+        body{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .Main{
+            width: 600px;
+            height: 500px;
+            border: 3px solid black;
+            border-radius: 40px;
+            text-align: center;
+            background-color:bisque;
+            color:darkblue;
+            margin-top: 100px;
+            
+        }
+        h1{
+            font-family:fantasy;
+            color:indianred;
+            font-weight: bolder;
+            
+        }
+        form{
+            margin-top: 100px;
+    
+        }
+        
+        
+    </style>
+</head>
+<body>
+    <div class="Main">
+   
+    <form onsubmit="main()">
+        <h1><u>Book A Call</u></h1>
+    
+        <label for="name">Name:</label>
+        <input type="text" id="name" placeholder="Enter your Fullname" required><br>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" placeholder="Enter your Email" required><br>
+
+        <label for="number">Mobile Number:</label>
+        <input type="number" id="number" placeholder="Enter your Number" required><br>
+
+        <label for="date">Enter the date:</label>
+        <input type="date" id="date"><br>
+
+        <label for="time">Enter the time:</label>
+        <input type="time" id="time"><br> 
+
+        <button class="btn btn-info">Submit</button>
+    
+    
+    </form>
+    </div>
+    <script>
+        function main(){
+            var nme= document.getElementById('name').value
+            localStorage.setItem("name",nme)
+
+            var ema= document.getElementById('email').value
+            localStorage.setItem("email",ema)
+
+            var nmb= document.getElementById('number').value
+            localStorage.setItem("number",nmb)
+            
+            var dte= document.getElementById('date').value
+            localStorage.setItem("date",dte)
+            
+            var tme= document.getElementById('time').value
+            localStorage.setItem("time",tme)
+
+
+
+        }
+
+    </script>
+</body>
+</html>
